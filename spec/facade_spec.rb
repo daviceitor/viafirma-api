@@ -8,7 +8,7 @@ describe Viafirma::Api::Facade do
   describe "#ping integration spec" do
 
     it "should ping web service" do
-      expect(facade.new.ping).to include(:ping_response)
+      expect(facade.new.ping).to eq "pingResponse"
     end
 
   end

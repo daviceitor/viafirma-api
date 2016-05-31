@@ -19,7 +19,14 @@ module Viafirma
       end
 
       def parse_response response
-        response
+        response_key = response.keys.detect{|k,v| k.to_s.end_with?('_response')}
+        data = response[response_key][:return]
+      
+        if data[:error]
+          raise "#{data[:response_code]}: #{data[:message]}"
+        else
+          data[:result]
+        end
       end
 
       private
