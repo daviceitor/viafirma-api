@@ -1,6 +1,6 @@
 # Viafirma::Api
 
-TODO: Write a gem description
+API for connect and manage e-sign with viafirma platform
 
 ## Installation
 
