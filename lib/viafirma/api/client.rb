@@ -3,15 +3,23 @@ require 'savon'
 module Viafirma
   module Api
     class Client
-      extend Savon::Model
 
       def initialize config
         validate(config)
-        self.class.client(wsdl: self.class.wsdl(config), wsse_auth: [config[:user], config[:apikey]])
+        @client = Savon.client(wsdl: self.class.wsdl(config), basic_auth: [config[:user], config[:apikey]])
       end
 
       def self.wsdl config
         "http://#{config[:server]}:#{config[:port] || 80}/inbox/serviceWS?wsdl"
+      end
+
+      def call *args
+        response = @client.call(*args)
+        parse_response(response.body)
+      end
+
+      def parse_response response
+        response
       end
 
       private
