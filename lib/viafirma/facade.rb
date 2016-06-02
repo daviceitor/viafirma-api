@@ -1,12 +1,13 @@
 require 'active_support/core_ext/hash/indifferent_access'
+require 'active_support/core_ext/module/delegation'
 
 module Viafirma
   module Api
     class Facade
+      delegate :call, to: :@client
       
-      def initialize
-        config = YAML.load(File.read("#{File.dirname(__FILE__)}/config.yml")).with_indifferent_access
-        @client = Client.new(config)
+      def initialize(credentials)
+        @client = Client.new(credentials.with_indifferent_access)
       end
 
       def ping
