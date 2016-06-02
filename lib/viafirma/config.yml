@@ -1,5 +1,4 @@
 server: testservices.viafirma.com
 port: 80
-instance: spica
-user: desarrollo
-apikey: I2LEBCKXK1YJEZS5SIIAKFEQATREYYEKBPK3POWD
+user: <api user>
+apikey: <api key>
