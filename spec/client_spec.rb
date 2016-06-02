@@ -51,7 +51,7 @@ describe Viafirma::Api::Client do
 
     it "should return the result for valid responses" do
       response_body = {:method_response=>{:return=>{:error=>false, :message=>nil, :response_code=>"SUCCESS", :result=>"methodResponse"}, :"@xmlns:ns2"=>"http://tray.viavansi.com"}}
-      expect(client.new(config).parse_response(response_body)).to eq "methodResponse"
+      expect(client.new(config).parse_response(response_body)).to eq response_body[:method_response][:return]
     end
 
     it "should raise error with a message" do

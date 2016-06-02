@@ -25,7 +25,7 @@ module Viafirma
         if data[:error]
           raise "#{data[:response_code]}: #{data[:message]}"
         else
-          data[:result]
+          data
         end
       end
 

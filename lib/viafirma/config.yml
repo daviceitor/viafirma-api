@@ -1,4 +1,0 @@
-server: testservices.viafirma.com
-port: 80
-user: <api user>
-apikey: <api key>
