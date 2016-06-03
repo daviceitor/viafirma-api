@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     viafirma-api (0.0.1)
-      activesupport
-      savon
+      activesupport (~> 3.2)
+      savon (~> 2.11)
 
 GEM
   remote: https://rubygems.org/
@@ -67,7 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.7)
-  debugger
+  debugger (~> 1.6)
   rake (~> 10.0)
-  rspec
+  rspec (~> 3.4)
   viafirma-api!
