@@ -2,14 +2,12 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'viafirma/api/version'
-require 'viafirma/api/client'
-require 'viafirma/facade'
-
+require 'viafirma-api/version'
+require 'viafirma-api/client'
 
 Gem::Specification.new do |spec|
   spec.name          = "viafirma-api"
-  spec.version       = Viafirma::Api::VERSION
+  spec.version       = ViafirmaApi::VERSION
   spec.authors       = ["David García Lorigados"]
   spec.email         = ["dglo1985@gmail.com"]
   spec.summary       = %q{API for connect and manage e-sign with viafirma platform}

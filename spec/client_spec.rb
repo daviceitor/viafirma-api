@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'viafirma/api/client'
 
 describe Viafirma::Api::Client do
 

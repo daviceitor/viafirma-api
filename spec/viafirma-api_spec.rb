@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'viafirma/facade'
 
 describe Viafirma::Api::Facade do
 
