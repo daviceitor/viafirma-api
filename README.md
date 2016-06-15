@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Viafirma API facade initialization:
 
-    facade = Viafirma::Api::Facade.new(server: <address>, user: <username>, apikey: <apikey>)
+    facade = ViafirmaApi::Facade.new(server: <address>, user: <username>, apikey: <apikey>)
     
 By default the gem will use the port 80 for the requests, but you can change it with aditional parameter in the initialization hash (`port: <portnumber>`)
 
