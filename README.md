@@ -1,4 +1,4 @@
-# Viafirma::Api
+# ViafirmaApi
 
 API for connect and manage e-sign with viafirma platform
 
