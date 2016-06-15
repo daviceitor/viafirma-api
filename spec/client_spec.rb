@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Viafirma::Api::Client do
+describe ViafirmaApi::Client do
 
   let(:config){ { server: 'whatever', port: 11, user: 'test', apikey: '123' } }
-  let(:client){ Viafirma::Api::Client }
+  let(:client){ ViafirmaApi::Client }
 
   describe "#initialize" do
     it "should build a well formed client" do

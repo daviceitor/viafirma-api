@@ -1,13 +1,14 @@
 require 'spec_helper'
+require 'viafirma-api'
 
-describe Viafirma::Api::Facade do
+describe ViafirmaApi::Facade do
 
-  let(:facade){ Viafirma::Api::Facade }
+  let(:facade){ ViafirmaApi::Facade }
 
   describe "#prepare_sign_request" do
 
     let(:client){ double("Client") }
-    before(:each){ allow(Viafirma::Api::Client).to receive(:new).and_return(client) }
+    before(:each){ allow(ViafirmaApi::Client).to receive(:new).and_return(client) }
 
     it "should encode document content before send the soap request" do
       allow(client).to receive(:call).with(:prepare_sign_request, message: hash_including(document_content: Base64.encode64('content')))
