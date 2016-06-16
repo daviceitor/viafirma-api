@@ -5,7 +5,7 @@ module ViafirmaApi
 
     def initialize(credentials)
       validate(credentials)
-      @client = Savon.client(wsdl: self.class.wsdl(credentials), basic_auth: [credentials[:user], credentials[:apikey]])
+      @client = Savon.client(adapter: :net_http, wsdl: self.class.wsdl(credentials), basic_auth: [credentials[:user], credentials[:apikey]])
     end
 
     def self.wsdl(credentials)

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    viafirma-api (0.0.1)
+    viafirma-api (0.0.2)
       activesupport (~> 3.2)
       savon (~> 2.11)
 
